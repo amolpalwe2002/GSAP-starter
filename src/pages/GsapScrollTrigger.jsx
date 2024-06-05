@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/all";
 import {useRef} from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 const GsapScrollTrigger = () => {
   const scrollRef = useRef();
@@ -18,7 +19,7 @@ const GsapScrollTrigger = () => {
         rotation: 360,
         borderRadius: '100%',
         ease: "bounce.out",
-        duration: 5,
+        duration: 2,
         // overflowY: 'hidden',
         scrollTrigger: {
           trigger: box,
